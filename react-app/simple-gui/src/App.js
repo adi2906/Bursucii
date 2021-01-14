@@ -1,8 +1,11 @@
 /** @format */
 
 import React from "react";
+import Professor from "./Professor";
+import store from "./ProfessorStore";
+import ProfessorAddForm from "./ProfessorAddForm";
 
-const SERVER = "http://localhost:8080";
+// const SERVER = "http://localhost:8080";
 
 class App extends React.Component {
 	constructor() {
@@ -10,29 +13,40 @@ class App extends React.Component {
 		this.state = {
 			professors: [],
 		};
+		this.add = (professor) => {
+			store.addOne(professor);
+		};
 	}
 
 	componentDidMount() {
-		fetch(`${SERVER}/professors`)
-			.then((response) => {
-				return response.json();
-			})
-			.then((data) => {
-				this.setState({
-					professors: data,
-				});
-			})
-			.catch((err) => {
-				console.warn(err);
+		store.getAll();
+		store.emitter.addListener("GET_PROFESSORS_SUCCES", () => {
+			this.setState({
+				professors: store.data,
 			});
+		});
+
+		// fetch(`${SERVER}/professors`)
+		// 	.then((response) => {
+		// 		return response.json();
+		// 	})
+		// 	.then((data) => {
+		// 		this.setState({
+		// 			professors: data,
+		// 		});
+		// 	})
+		// 	.catch((err) => {
+		// 		console.warn(err);
+		// 	});
 	} //29:34
 
 	render() {
 		return (
 			<div>
 				{this.state.professors.map((e) => (
-					<div>{e.firstName}</div>
+					<Professor item={e} key={e.id} />
 				))}
+				<ProfessorAddForm onAdd={this.add} />
 			</div>
 		);
 	}
