@@ -34,7 +34,7 @@ class ProfessorDetails extends React.Component {
 				students: this.store.data,
 			});
 		});
-		console.log("===================="); //nu stiu de ce nu primeste stundetii in state.
+		console.log("====================");
 		console.log(this.store.getAll);
 		//console.log(this.state);
 		console.log(this.store.emitter);

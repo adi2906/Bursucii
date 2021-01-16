@@ -72,7 +72,7 @@ class Professor extends React.Component {
 						<span>
 							<input type="text" name="experience" value={this.state.experience} onChange={this.handleChange} />
 						</span>
-						<hr />
+						<br />
 						<input type="button" value="Cancel" onClick={this.cancel} />
 						<input type="button" value="Save" onClick={this.save} />
 						<input type="button" value="Select" onClick={this.select} />
