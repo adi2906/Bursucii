@@ -1,6 +1,7 @@
 /** @format */
 
 import React from "react";
+import "./myStyle.css";
 
 class Professor extends React.Component {
 	constructor(props) {
@@ -58,7 +59,7 @@ class Professor extends React.Component {
 		return (
 			<div>
 				{this.state.isEditing ? (
-					<>
+					<div className="professor-editing professor-list">
 						<span>
 							<input type="text" name="firstName" value={this.state.firstName} onChange={this.handleChange} />
 						</span>
@@ -71,21 +72,24 @@ class Professor extends React.Component {
 						<span>
 							<input type="text" name="experience" value={this.state.experience} onChange={this.handleChange} />
 						</span>
-						<input type="button" value="cancel" onClick={this.cancel} />
-						<input type="button" value="save" onClick={this.save} />
-						<input type="button" value="select" onClick={this.select} />
-					</>
+						<hr />
+						<input type="button" value="Cancel" onClick={this.cancel} />
+						<input type="button" value="Save" onClick={this.save} />
+						<input type="button" value="Select" onClick={this.select} />
+					</div>
 				) : (
-					<>
-						<span>{item.firstName}</span>
-						<span>{item.lastName}</span>
-						<span>{item.subject}</span>
-						<span>{item.experience}</span>
+					<div className="professor-list">
+						<span>First name: {item.firstName} </span>
+						<span>Last name: {item.lastName} </span>
+						<span>Subject: {item.subject} </span>
+						<span>Experience: {item.experience} year(s) </span>
+						<br></br>
 						<span>
 							<input type="button" value="Delete Professor" onClick={this.delete} />
 							<input type="button" value="Edit Professor" onClick={this.edit} />
 						</span>
-					</>
+						<hr />
+					</div>
 				)}
 			</div>
 		);

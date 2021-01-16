@@ -1,24 +1,21 @@
 /** @format */
 
 import React from "react";
-import "./myStyle.css";
 
-class ProfessorAddForm extends React.Component {
+class StudentAddForm extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			firstName: "",
-			lastName: "",
-			subject: "",
-			experience: "",
+			firstName: " ",
+			lastName: " ",
+			absences: " ",
 		};
 
 		this.add = () => {
 			this.props.onAdd({
 				firstName: this.state.firstName,
 				lastName: this.state.lastName,
-				subject: this.state.subject,
-				experience: this.state.experience,
+				absences: this.state.absences,
 			});
 		};
 
@@ -30,9 +27,8 @@ class ProfessorAddForm extends React.Component {
 	}
 	render() {
 		return (
-			<div className="add-professor-form">
+			<div>
 				<div>
-					<h2>Add a Professor!</h2>
 					<label className="test" htmlFor="firstName">
 						First Name
 					</label>
@@ -43,19 +39,15 @@ class ProfessorAddForm extends React.Component {
 					<input type="text" name="lastName" id="lastName" value={this.state.lastName} onChange={this.handleChange} />
 				</div>
 				<div>
-					<label htmlFor="subject">Subject</label>
-					<input type="text" name="subject" id="subject" value={this.state.subject} onChange={this.handleChange} />
+					<label htmlFor="absences">Absences</label>
+					<input type="text" name="absences" id="absences" value={this.state.absences} onChange={this.handleChange} />
 				</div>
 				<div>
-					<label htmlFor="experience">Experience</label>
-					<input type="text" name="experience" id="experience" value={this.state.experience} onChange={this.handleChange} />
-				</div>
-				<div>
-					<input type="button" value="Add" onClick={this.add} />
+					<input type="button" value="add" onClick={this.add} />
 				</div>
 			</div>
 		);
 	}
 }
 
-export default ProfessorAddForm;
+export default StudentAddForm;

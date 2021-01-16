@@ -5,6 +5,7 @@ import Professor from "./Professor";
 import store from "./ProfessorStore";
 import ProfessorAddForm from "./ProfessorAddForm";
 import ProfessorDetails from "./ProfessorDetails";
+import "./myStyle.css";
 
 // const SERVER = "http://localhost:8080";
 
@@ -66,11 +67,15 @@ class App extends React.Component {
 	render() {
 		if (this.state.selected === 0) {
 			return (
-				<div>
-					{this.state.professors.map((e) => (
-						<Professor item={e} key={e.id} onSave={this.save} onDelete={this.delete} onSelect={this.select} />
-					))}
-					<ProfessorAddForm onAdd={this.add} />
+				<div className="flex-container">
+					<div className="list-professors">
+						{this.state.professors.map((e) => (
+							<Professor item={e} key={e.id} onSave={this.save} onDelete={this.delete} onSelect={this.select} />
+						))}
+					</div>
+					<div className="add-professor">
+						<ProfessorAddForm onAdd={this.add} />
+					</div>
 				</div>
 			);
 		} else {

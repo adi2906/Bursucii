@@ -1,4 +1,123 @@
 /** @format */
 
-.test {
+body {
+	background: url("https://www.knoxalliance.store/wp-content/uploads/2017/05/light-color-background-images-for-website-top-hd-images-for-free-background-for-website-in-light-color-1-1024x640.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.flex-container {
+	/* height: 100vh; */
+	/* flex-direction: column; */
+	width: 50%;
+	height: 1500px;
+
+	display: flex;
+	justify-content: flex-start;
+	align-items: flex-start;
+	border: 2px solid black;
+}
+
+.add-professor {
+}
+
+button {
+	background-color: red;
+}
+
+.important {
+	background-color: red;
+}
+
+.add-professor-form,
+.professor-editing {
+	border-radius: 5px;
+	background-color: #f2f2f2;
+	padding: 20px;
+}
+.add-professor-form input[type="button"] {
+	width: 100%;
+	background-color: #4caf50;
+	color: white;
+	padding: 14px 20px;
+	margin: 8px 0;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+}
+
+input[type="button"]:hover {
+	background-color: #45a049;
+}
+
+input[type="text"],
+select {
+	width: 100%;
+	padding: 12px 20px;
+	margin: 8px 0;
+	display: inline-block;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	box-sizing: border-box;
+}
+
+/* Professor.js */
+
+.professor-list {
+	font-size: 1.25em;
+	margin: 5px;
+	display: flex;
+	flex-direction: column;
+}
+
+/* delete Professor btn */
+.professor-list span [type="button"]:first-child {
+	background-color: #e00000;
+	border: none;
+	color: white;
+	padding: 15px 32px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 0.8em;
+}
+/* edit professor btn */
+.professor-list span [type="button"]:last-child {
+	background-color: #00a4af;
+	border: none;
+	color: white;
+	padding: 15px 32px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 0.8em;
+}
+
+/* ON editing btn */
+
+.professor-editing {
+	background-color: #00a4af;
+}
+
+.professor-editing [type="button"] {
+	background-color: #006269;
+	border: none;
+	color: white;
+	padding: 15px 32px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 0.8em;
+	border: 1px solid black;
+	margin-bottom: 5px;
+}
+.professor-editing [type="button"]:hover {
+	background-color: #00a7b3;
+}
+
+/* ProfessorDetails.js */
+
+.professor-details {
+	display: flex;
+	flex-direction: column;
+	width: 20%;
 }
