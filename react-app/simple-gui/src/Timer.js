@@ -11,11 +11,11 @@ class Timer extends Component {
 	}
 
 	render() {
-		//daca count == 0 atunci timeOUT message!
+		//daca count == 0 atunci timeout message!
 		const { count } = this.state;
 		if (this.state.count > 0) {
 			return (
-				<div>
+				<div className="timer">
 					<h1>
 						Time Remaining: {Math.floor(count / 60)} minutes and {count % 60} seconds
 					</h1>
