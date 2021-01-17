@@ -13,12 +13,8 @@ body {
 	height: 1500px;
 
 	display: flex;
-	justify-content: flex-start;
+	justify-content: center;
 	align-items: flex-start;
-	border: 2px solid black;
-}
-
-.add-professor {
 }
 
 button {
@@ -32,12 +28,13 @@ button {
 .add-professor-form,
 .professor-editing {
 	border-radius: 5px;
-	background-color: #f2f2f2;
+	background-color: #00a4af;
 	padding: 20px;
+	margin: 10px;
 }
 .add-professor-form input[type="button"] {
 	width: 100%;
-	background-color: #4caf50;
+	background-color: #457b9d;
 	color: white;
 	padding: 14px 20px;
 	margin: 8px 0;
@@ -48,7 +45,7 @@ button {
 
 div input[type="button"] {
 	width: 100%;
-	background-color: #4caf50;
+	background-color: #457b9d;
 	color: white;
 	padding: 14px 20px;
 	margin: 8px 0;
@@ -58,7 +55,7 @@ div input[type="button"] {
 }
 
 input[type="button"]:hover {
-	background-color: #45a049;
+	background-color: #5da8d6;
 }
 
 input[type="text"],
@@ -94,7 +91,7 @@ select {
 }
 /* edit professor btn */
 .professor-list span [type="button"]:last-child {
-	background-color: #00a4af;
+	background-color: #0083c0;
 	border: none;
 	color: white;
 	padding: 15px 32px;
@@ -142,6 +139,20 @@ select {
 	display: flex;
 	align-items: center;
 	flex-direction: column;
+
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+	transition: 0.3s;
+	border-radius: 10px;
+	background-color: #00a4af;
+	padding: 5px;
+	padding-bottom: 20px;
+	margin: 10px;
+	width: 300px;
+	color: black;
+	text-align: center;
+}
+.participate-as:hover {
+	box-shadow: 0 5px 16px 0 rgba(0, 0, 0, 0.514);
 }
 
 /* tabla de desenat */
@@ -212,4 +223,43 @@ h1 {
 
 .card .btn-feedback:hover {
 	background-color: rgba(6, 224, 253, 0.616);
+}
+
+.list-professors {
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+	transition: 0.3s;
+	border-radius: 10px;
+	background-color: #00a3af;
+	padding: 5px;
+	padding-bottom: 20px;
+	margin: 10px;
+	width: 300px;
+	color: black;
+	text-align: center;
+}
+/* ProfessorDetails.js */
+
+.professor-details {
+	width: 60%;
+	height: 200px;
+	margin: 0 auto;
+}
+
+.cardV2 {
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+	transition: 0.3s;
+	border-radius: 10px;
+	background-color: #00a4af;
+	padding: 5px;
+
+	height: 215px;
+	display: flex;
+	align-items: center;
+	width: 300px;
+	margin: 10px;
+	color: black;
+	text-align: center;
+}
+.cardV2:hover {
+	box-shadow: 0 5px 16px 0 rgba(0, 0, 0, 0.514);
 }

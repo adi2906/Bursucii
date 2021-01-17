@@ -29,6 +29,7 @@ class App extends React.Component {
 			frownyFace: 0,
 			surprisedFace: 0,
 			confusedFace: 0,
+			showControls: 0,
 		};
 
 		this.add = (professor) => {
@@ -99,6 +100,19 @@ class App extends React.Component {
 			});
 			console.log(this.state.confusedFace);
 		};
+
+		this.showControls = () => {
+			if (this.state.showControls === 0) {
+				this.setState({
+					showControls: 1,
+				});
+			} else {
+				this.setState({
+					showControls: 0,
+				});
+			}
+			console.log(this.state.showControls);
+		};
 	}
 
 	componentDidMount() {
@@ -140,40 +154,43 @@ class App extends React.Component {
 	render() {
 		if (this.state.asProfessor === 0 && this.state.asStudent === 0) {
 			if (this.state.selected === 0) {
-				return (
-					<div className="flex-container">
-						<div className="list-professors">
-							{this.state.professors.map((e) => (
-								<Professor item={e} key={e.id} onSave={this.save} onDelete={this.delete} onSelect={this.select} />
-							))}
-							{console.log(this.state)}
+				if (this.state.showControls === 0) {
+					return (
+						<div className="flex-container">
+							<div className="cardV2">
+								<input type="button" onClick={this.showControls} value="Manage Professors and Students"></input>
+							</div>
+							<ParticipateAs onClickProfessor={this.btnProfessor} onClickStudent={this.btnStudent} />
 						</div>
-						<div className="add-professor">
-							<ProfessorAddForm onAdd={this.add} />
+					);
+				} else {
+					return (
+						<div className="flex-container">
+							<div className="cardV2">
+								<input type="button" onClick={this.showControls} value="Hide controls"></input>
+							</div>
+
+							<div className="list-professors">
+								{this.state.professors.map((e) => (
+									<Professor item={e} key={e.id} onSave={this.save} onDelete={this.delete} onSelect={this.select} />
+								))}
+							</div>
+							<div className="add-professor">
+								<ProfessorAddForm onAdd={this.add} />
+							</div>
+							<ParticipateAs onClickProfessor={this.btnProfessor} onClickStudent={this.btnStudent} />
 						</div>
-						<ParticipateAs onClickProfessor={this.btnProfessor} onClickStudent={this.btnStudent} />
-					</div>
-				);
+					);
+				}
 			} else if (this.state.selected !== 0) {
-				// fa ceva dupa select
+				// dupa select prof
 				return (
 					<div>
-						<h3>List of Students</h3>
-						{this.state.students.map((e) => (
-							<div className="list-of-students">
-								<span>{e.firstName} </span>
-								<span>{e.lastName} </span>
-								<span>{e.absences} </span>
-							</div>
-						))}
 						<ProfessorDetails onCancel={this.cancel} itemId={this.state.selected} />
-
-						{console.log("+++++++")}
-						{console.log(this.state.students)}
 					</div>
 				);
 			} else {
-				return "test";
+				return "er";
 			}
 		} else if (this.state.asProfessor === 1) {
 			/*PROFESOR */
@@ -252,5 +269,7 @@ class App extends React.Component {
 		}
 	}
 }
+
+// TODO: un input pt numele orei
 
 export default App;

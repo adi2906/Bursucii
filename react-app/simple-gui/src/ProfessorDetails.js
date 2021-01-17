@@ -43,8 +43,7 @@ class ProfessorDetails extends React.Component {
 	render() {
 		return (
 			<div className="professor-details">
-				<h1> details page for {this.props.itemId}</h1>
-				{this.store.data.length}
+				<h1> Add a Student to Professor with ID:{this.props.itemId}</h1>
 
 				{/* nu merge:() */}
 				{this.state.students.map((e) => (
@@ -54,7 +53,7 @@ class ProfessorDetails extends React.Component {
 					<StudentAddForm onAdd={this.add} />
 				</div>
 				<div>
-					<input type="button" value="cancel" onClick={this.cancel} />
+					<input type="button" value="Cancel" onClick={this.cancel} />
 				</div>
 			</div>
 		);

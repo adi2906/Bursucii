@@ -88,7 +88,7 @@ class Professor extends React.Component {
 							<input type="button" value="Delete Professor" onClick={this.delete} />
 							<input type="button" value="Edit Professor" onClick={this.edit} />
 						</span>
-						<hr />
+						<br />
 					</div>
 				)}
 			</div>

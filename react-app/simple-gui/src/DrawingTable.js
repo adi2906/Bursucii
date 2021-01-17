@@ -11,9 +11,9 @@ function DrawingTable() {
 	useEffect(() => {
 		const canvas = canvasRef.current;
 		canvas.width = 2000;
-		canvas.height = 1500;
+		canvas.height = 1200;
 		canvas.style.width = `1000px`;
-		canvas.style.height = `750px`;
+		canvas.style.height = `600px`;
 
 		const context = canvas.getContext("2d");
 		context.scale(2, 2);

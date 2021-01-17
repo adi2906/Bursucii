@@ -43,7 +43,7 @@ class StudentAddForm extends React.Component {
 					<input type="text" name="absences" id="absences" value={this.state.absences} onChange={this.handleChange} />
 				</div>
 				<div>
-					<input type="button" value="add" onClick={this.add} />
+					<input type="button" value="Add" onClick={this.add} />
 				</div>
 			</div>
 		);
