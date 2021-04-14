@@ -1,29 +1,8 @@
 <!-- @format -->
 
-# Bursucii
+# react-app
 
-Tema:
-Aplicatie web acordarea de feedback continuu
-
-Grupa 1086
-
-Echipa:
-Romascu Denisa Elena
-Stan Simona Daniela
-Soare Paul-Adrian
-
-Info:
-Aplicatia Web permite acordarea de feedback continuu pe parcursul unui curs sau seminariu.
-La deschiderea aplicatiei, utilizatorul poate alege una dintre cele doua optiuni existente pe ecran: profesor si student.
-Se pot adauga noi profesori/studenti
-
-Daca este aleasa optiunea:
-
-Student:
--Are acces la 4 cadrane, fiecare continand un emoticon
--Studentul poate reactiona cu cate emoticoane doreste, insa studentul va ramane anonim
--Se poate vedea cadranul cu feedback-ul acordat
-
-Profesor:
--Poate vedea emoticoanele din timpul activitatii, insa studentii raman anonimi
--La fel ca si in optiunea student, profesorul are acces la lista de stundeti, tabla si poate vedea timpul pana la terminarea orei.
+![1](https://user-images.githubusercontent.com/72071682/114763319-55b63c80-9d6b-11eb-8392-577d212b587b.PNG)
+![2](https://user-images.githubusercontent.com/72071682/114763327-57800000-9d6b-11eb-8dba-ab1c57e25150.PNG)
+![4](https://user-images.githubusercontent.com/72071682/114763332-58b12d00-9d6b-11eb-96b1-14e170ea8d41.PNG)
+![3](https://user-images.githubusercontent.com/72071682/114763336-5a7af080-9d6b-11eb-8447-3a671dac7af8.PNG)
